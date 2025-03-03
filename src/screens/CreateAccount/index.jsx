@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import styles from "./style";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const CreateAccount = ({ navigation }) => {
   return (
@@ -56,6 +57,7 @@ const CreateAccount = ({ navigation }) => {
             <Text style={styles.createBtnText}>Create Account</Text>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={() => navigation.navigate("HomePage")}
             style={[
               styles.createButton,
               { backgroundColor: "white", marginTop: 10 },
